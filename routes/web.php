@@ -26,7 +26,9 @@ Route::get('/admin', function () {
     return view('admin');
 });
 // Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-
+Route::get('/article', function () {
+    return view('article');
+})->name('article');
 
 
 Route::middleware([

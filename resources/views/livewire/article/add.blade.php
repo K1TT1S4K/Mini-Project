@@ -247,7 +247,7 @@
                                     <div class="form-group">
                                         <label for="inputName">Title</label>
                                         <input type="text" id="inputName" wire:model="title" class="form-control">
-                                        @error('name')
+                                        @error('title')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>

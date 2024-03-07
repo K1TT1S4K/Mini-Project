@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Project;
+namespace App\Livewire\Article;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Livewire\Component;
@@ -9,23 +9,23 @@ use Livewire\WithFileUploads;
 class Add extends Component
 {
     use WithFileUploads;
-    public $name, $email, $password, $photo;
+    public $title, $detail, $file, $photo;
     public function add(){
         $this->validate([
-            'name' => 'required|min:2',
+            'title' => 'required|min:2',
         ],
         [
-            'name.required' => 'กรุณากรอกชื่อ',
-            'name.min' => 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร',
+            'title.required' => 'กรุณากรอกชื่อ',
+            'title.min' => 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร',
         ]);
         //dd($this->weight);
         try{
             $model = User::create([
-                'name' => $this->name,
-                'email' => $this->email,
-                'password' => Hash::make($this->password),
+                'title' => $this->title,
+                'detail' => $this->detail,
+                // 'password' => Hash::make($this->password),
                 'create_by' => auth()->user()->id,
-                'is_admin' => $this->is_admin,
+                // 'is_admin' => $this->is_admin,
 
             ]);
             if($this->image){
@@ -33,7 +33,7 @@ class Add extends Component
                 $model->image_path = $fullpath;
                 $model->save();
             }
-            return redirect()->to(route('project'));
+            return redirect()->to(route('article'));
         }
         catch(\Exception $e){
             dd($e);
@@ -41,6 +41,6 @@ class Add extends Component
     }
     public function render()
     {
-        return view('livewire.project.add');
+        return view('livewire.article.add');
     }
 }

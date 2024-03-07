@@ -3,6 +3,6 @@
 @section('content')
 
 {{-- @dd($id) --}}
-@livewire('project.edit',['id' => $id])
+@livewire('article.edit',['id' => $id])
 
 @endsection
