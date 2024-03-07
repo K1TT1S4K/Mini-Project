@@ -11,8 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: url('https://images.hdqwalls.com/download/synthwave-of-retro-night-6s-1360x768.jpg');
+    height: 100vh;
+    background: url('https://images7.alphacoders.com/116/thumb-1920-1169911.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -43,26 +43,25 @@ header {
     z-index: 99;
 }
 
-/* header .icon-menu {
-    background: transparent;
-    color: white;
-    font-size: 2em;
-} */
-/* header .icon-menu {
-    position: flex;
+.sidebar {
+    position: fixed;
     top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: transparent;
-    color: white;
-    font-size: 2em;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: cornflowerblue;
+    padding: 10px 14px;
+}
+
+.sidebar .user-image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .user-image {
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    z-index: 1;
-} */
+}
 
 .icon-menu {
     background: transparent;

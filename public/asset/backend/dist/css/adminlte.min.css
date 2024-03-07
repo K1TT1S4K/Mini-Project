@@ -76,7 +76,7 @@ body {
     color: black;
     text-align: left;
     /* background-color: #fff */
-    background: url('https://images.hdqwalls.com/download/synthwave-of-retro-night-6s-1360x768.jpg');
+    background: url('https://wallpapercosmos.com/w/full/b/a/9/1209998-3840x2160-desktop-4k-glow-in-the-dark-background-photo.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -5614,7 +5614,7 @@ input[type=submit].btn-block {
 }
 
 .breadcrumb-item.active {
-    color: #6c757d
+    color: #fff
 }
 
 .pagination {
@@ -13240,7 +13240,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .content-header {
-    padding: 15px .5rem
+    padding: 15px .5rem;
+    color: white;
 }
 
 .text-sm .content-header {
@@ -37250,7 +37251,8 @@ body.iframe-mode-fullscreen.layout-navbar-fixed .wrapper .content-wrapper {
 }
 
 .content-wrapper {
-    height: 100%
+    height: 100%;
+    background: transparent;
 }
 
 .content-wrapper.iframe-mode .btn-iframe-close {

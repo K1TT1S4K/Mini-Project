@@ -49,11 +49,11 @@ class LoginController extends Controller
                 return redirect()->route('admin.home');
             }
             else {	//หากไม่ใช่ ให้ไปที่หน้า Home ปกติ
-                return redirect()->route('home');
+                return redirect()->route('dashboard');
             }
         }
         else {	//หากอีเมล กับ รหัสผ่าน ผิด ให้ไปที่หน้าล็อกอิน พร้อมขึ้นข้อความที่กำหนด
-            return redirect()->route('login')->with('error','Email-address and Password are wrong.');
+            return redirect()->route('login')->with('error',"Email-address and Password are wrong.");
 
         }
     }

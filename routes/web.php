@@ -45,12 +45,27 @@ Route::middleware([
     Route::get('/project', function () {
         return view('project');
     })->name('project');
+
     Route::get('/project-add', function () {
         return view('project.add');
     })->name('project-add');
+
     Route::get('/project-edit/{id}', function ($id) {
         return view('project.edit',compact('id'));
     })->name('project-edit');
+
+    Route::get('/article', function () {
+        return view('article');
+    })->name('article');
+
+    Route::get('/article-add', function () {
+        return view('article.add');
+    })->name('article-add');
+
+    Route::get('/article-edit', function () {
+        return view('article.edit',compact('id'));
+    })->name('article-edit');
+
     Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 });
 

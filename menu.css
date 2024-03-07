@@ -1,0 +1,82 @@
+:root {
+    --transition: all 0.2s ease;
+    --transition: all 0.3s ease;
+    --transition: all 0.4s ease;
+    --transition: all 0.5s ease;
+}
+
+* {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: gray;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: cornflowerblue;
+    padding: 10px 14px;
+}
+
+.sidebar .user-image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .user-image {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar .user-image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+header .user-image .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profession {
+    font-weight: 600;
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+}

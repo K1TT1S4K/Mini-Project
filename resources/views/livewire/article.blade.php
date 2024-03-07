@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Article</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Projects</li>
+              <li class="breadcrumb-item active">Article</li>
             </ol>
           </div>
         </div>
@@ -27,12 +27,12 @@
       <div class="card">
         <div class="card-header">
 
-          <h3 class="card-title">Projects</h3>
+          <h3 class="card-title">Article</h3>
           <div>
             <br>
               <a href="{{ route('project-add')}}" class="btn btn-primary">
                 <i class="fas fa-folder"></i>
-                Create
+                + Article
               </a>
             </br>
           </div>
@@ -47,17 +47,17 @@
           </div>
         </div>
         <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <table class="table table-striped article">
               <thead>
                   <tr>
                       <th style="width: 1%">
                           #
                       </th>
                       <th style="width: 20%">
-                          Username
+                          Article
                       </th>
                       <th style="width: 30%">
-                          Photo
+                          Image
                       </th>
                       <th>
                           Email
@@ -87,7 +87,7 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="{{asset('storage')}}/{{$item->profile_photo_path}}">
+                                  <img alt="Avatar" class="table-avatar" src="{{asset('storage')}}/{{$item->image_path}}">
                               </li>
                           </ul>
                       </td>

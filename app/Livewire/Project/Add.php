@@ -12,11 +12,11 @@ class Add extends Component
     public $name, $email, $password, $photo;
     public function add(){
         $this->validate([
-            'name' => 'required|min:2',
+            'title' => 'required|min:2',
         ],
         [
-            'name.required' => 'กรุณากรอกชื่อ',
-            'name.min' => 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร',
+            'title.required' => 'กรุณากรอกชื่อ',
+            'title.min' => 'กรุณากรอกข้อมูลมากกว่า 2 ตัวอักษร',
         ]);
         //dd($this->weight);
         try{
@@ -25,11 +25,12 @@ class Add extends Component
                 'email' => $this->email,
                 'password' => Hash::make($this->password),
                 'create_by' => auth()->user()->id,
+                'is_admin' => $this->is_admin,
 
             ]);
-            if($this->photo){
-                $fullpath = $this->photo->store('photos','public');
-                $model->profile_photo_path = $fullpath;
+            if($this->image){
+                $fullpath = $this->image->store('images','public');
+                $model->image_path = $fullpath;
                 $model->save();
             }
             return redirect()->to(route('project'));
