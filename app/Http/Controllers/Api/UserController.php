@@ -76,6 +76,7 @@ class UserController extends Controller
         try{
             User::where('id',$id) -> update([
                 'name' => $request['name'],
+                'password' => $request['password'],
                 //'region_id' => $request['region_id']
             ]);
             return response() -> json([

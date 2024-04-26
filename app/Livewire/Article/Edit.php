@@ -2,15 +2,16 @@
 
 namespace App\Livewire\Article;
 
-use App\Models\User;
+use App\Models\Article;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class Edit extends Component
 {
-    public $idd,$title,$detail,$photo;
+    use WithFileUploads;
+    public $idd,$title,$detail;//$photo;
     public function edit(){
-        User::where('id', $this->idd)->update([
+        Article::where('id', $this->idd)->update([
             'title' => $this->title,
             'detail' => $this->detail,
         ]);
@@ -18,11 +19,11 @@ class Edit extends Component
 
     }
     public function mount($id){
-        $data = User::find($id);
+        $data = Article::find($id);
         $this->idd = $id;
         $this->title = $data->title;
         $this->detail = $data->detail;
-        //dd($data);
+        dd($data);
     }
 
     public function render()

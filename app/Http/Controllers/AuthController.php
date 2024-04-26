@@ -24,21 +24,24 @@ class AuthController extends Controller
             ]);
         }
         $data = request(['email','password']);
-        //dd($data);
+        // dd($data);
         if(!Auth::attempt($data)){
             return response()->json([
                 'message' => "User Not Found",
                 'code' => "500",
             ]);
         }
+        // dd($data);
         $user = User::where('email', $request->email)->first();
+        // dd($user);
         $token = $user -> createToken('authToken')->plainTextToken;
+        // dd(auth()->user());
         return response()->json([
             'token' => $token,
             'message' => 'Login Complete',
             'user' => auth()->user(),
         ]);
-        //dd($user);
+        // dd($user);
     }
     public function logout(Request $request){
         $request -> user() -> currentAccessToken() -> delete();

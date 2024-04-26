@@ -147,11 +147,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="asset/backend/index3.html" class="brand-link">
-                <img src="{{ asset('asset/backend/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
-            </a>
+
 
             <!-- Sidebar -->
             <div class="sidebar">
@@ -261,12 +257,12 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="inputName">Title</label>
-                                        <input type="text" id="inputName" wire:model="title"
+                                        <label for="inputTitle">Title</label>
+                                        <input type="text" id="inputTitle" wire:model="title"
                                             class="form-control">
-                                        @error('name')
+                                        {{-- @error('name')
                                             <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        @enderror --}}
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName">File</label>

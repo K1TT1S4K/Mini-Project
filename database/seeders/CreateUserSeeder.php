@@ -18,7 +18,7 @@ class CreateUserSeeder extends Seeder
                 'name' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'is_admin' => '1',	//เซ็ตค่า 1 เพื่อระบุว่า เป็นแอดมิน
-                'password' => bcrypt('123456789'),
+                'password' => '123456789',
             ],
             [
                 'name' => 'User',

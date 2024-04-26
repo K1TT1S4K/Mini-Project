@@ -82,6 +82,21 @@
                     <label>Username</label>
                 </div>
                 <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="gender">
+                    <label>Gender</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="height">
+                    <label>Height</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="weight">
+                    <label>Weight</label>
+                </div>
+                <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" name="email">
                     <label>Email</label>

@@ -12,7 +12,7 @@ class Add extends Component
     public $title, $detail, $file, $photo;
     public function add(){
         $this->validate([
-            'title' => 'required|min:2',
+            'title' => 'required',
         ],
         [
             'title.required' => 'กรุณากรอกชื่อ',
@@ -28,9 +28,9 @@ class Add extends Component
                 // 'is_admin' => $this->is_admin,
 
             ]);
-            if($this->image){
+            if($this->article_image){
                 $fullpath = $this->image->store('images','public');
-                $model->image_path = $fullpath;
+                $model->article_image_path = $fullpath;
                 $model->save();
             }
             return redirect()->to(route('article'));

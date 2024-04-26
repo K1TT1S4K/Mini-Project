@@ -50,9 +50,9 @@
                     <table class="table table-striped article">
                         <thead>
                             <tr>
-                                {{-- <th style="width: 1%">
-                          #
-                      </th> --}}
+                                <th style="width: 10%">
+                                    No.
+                                </th>
                                 <th style="width: 10%">
                                     Title
                                 </th>
@@ -89,7 +89,7 @@
                                         <ul class="list-inline">
                                             <li class="list-inline-item">
                                                 <img alt="Avatar" class="table-avatar"
-                                                    src="{{ asset('storage') }}/{{ $item->image_path }}">
+                                                    src="{{ asset('storage') }}/{{ $item->article_image_path }}">
                                             </li>
                                         </ul>
                                     </td>

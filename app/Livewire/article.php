@@ -12,16 +12,17 @@ class Article extends Component
     protected $paginationTheme = 'bootstrap';
     public function render()
     {
-        //$data = User::all();
+        //$data = Article::all();
         $data = User::Paginate(2);
         return view('livewire.article')->with(compact('data'));
     }
     public function delete($idd){
 
-        //dd($idd);
+        dd($idd);
         $model = User::find($idd);
         $model->delete_by = auth()->user()->id;
         $model->save();
         $model->delete();
     }
 }
+?>

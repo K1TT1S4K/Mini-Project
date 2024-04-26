@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('title');
             $table->string('detail');
             $table->string('image');
@@ -21,7 +20,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->index();
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('article_image_path', 2048)->nullable();
             $table->foreignId('create_by')->comment('สร้างโดย user_id')->nullable();
             $table->foreignId('update_by')->comment('แก้ไขโดย user_id')->nullable();
             $table->foreignId('delete_by')->comment('ลบโดย user_id')->nullable();

@@ -64,7 +64,7 @@ Route::middleware([
         return view('article.add');
     })->name('article-add');
 
-    Route::get('/article-edit', function () {
+    Route::get('/article-edit/{id}', function ($id) {
         return view('article.edit',compact('id'));
     })->name('article-edit');
 
