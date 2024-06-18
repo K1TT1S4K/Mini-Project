@@ -22,12 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('login',[AuthController::class,'login'])->name('api.login');
 
 //Route::resource('province' , ProvinceController::class);
-Route::resource('user' , UserController::class);
+// Route::resource('user' , UserController::class);
 Route::group(['middleware' => [
     'auth:sanctum',
 ]],
     function(){
-
+        Route::resource('user' , UserController::class);
         Route::post('logout',[AuthController::class,'logout'])->name('api.logout');
     }
 );

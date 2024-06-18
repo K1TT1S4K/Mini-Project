@@ -83,8 +83,20 @@
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="gender">
+                    {{-- <input type="text" name="gender"> --}}
+                    <select id="gender" type="text" name="gender"
+                        class="form-control custom-select">
+                        <option selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                     <label>Gender</label>
+                        {{-- <select id="gender" type="text" name="gender"
+                            class="form-control custom-select">
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select> --}}
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>

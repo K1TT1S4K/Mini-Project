@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             // $table->boolean('is_admin')->nullable();
-            $table->string('gender');//->nullable();
+            $table->text('gender');//->nullable();
             $table->string('height');//->nullable();
             $table->string('weight');//->nullable();
             $table->string('email')->unique();
@@ -26,10 +26,10 @@ return new class extends Migration
             $table->foreignId('status_id')->nullable()->index();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->timestamps();
             $table->foreignId('created_by')->comment('สร้างโดย user_id')->nullable();
             $table->foreignId('updated_by')->comment('แก้ไขโดย user_id')->nullable();
             $table->foreignId('deleted_by')->comment('ลบโดย user_id')->nullable();
-            $table->timestamps();
             $table->softDeletes();
         });
     }

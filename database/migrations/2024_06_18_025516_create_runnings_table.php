@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('runnings', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('detail');
-            $table->string('image');
-            $table->string('file');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
+            $table->timestamp('start_at')->nullable();
+            $table->timestamp('end_at')->nullable();
+            $table->text('distance');
+            $table->text('calorie_burn');
+            $table->text('weather');
             $table->foreignId('user_id')->nullable()->index();
-            $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->string('article_image_path', 2048)->nullable();
+            $table->foreignId('activity_id')->nullable()->index();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreignId('create_by')->comment('สร้างโดย user_id')->nullable();
             $table->foreignId('update_by')->comment('แก้ไขโดย user_id')->nullable();
             $table->foreignId('delete_by')->comment('ลบโดย user_id')->nullable();
-            $table->softDeletes();
         });
     }
 
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('runnings');
     }
 };
